@@ -22,3 +22,6 @@ jobs:
 
       - name: Compress PR Images
         uses: calibreapp/image-actions@main
+        with:
+          compressOnly: false
+          minPctChange: 0
