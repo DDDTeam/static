@@ -4,7 +4,7 @@ on:
     paths:
       - "**.jpg"
       - "**.jpeg"
-      - "**.png"
+      - "static/films/**.png"
   workflow_dispatch:
 
 jobs:
