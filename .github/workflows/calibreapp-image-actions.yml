@@ -1,0 +1,25 @@
+name: Compress Images
+on:
+  pull_request:
+    paths:
+      - "**.png"
+      - "**.jpg"
+      - "**.jpeg"
+  workflow_dispatch:
+
+jobs:
+  build:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    name: calibreapp/image-actions
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Compress PR Images
+        uses: calibreapp/image-actions@main
+        with:
+          compressOnly: false
+          minPctChange: 0
