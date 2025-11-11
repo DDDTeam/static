@@ -2,9 +2,9 @@ name: Compress Images
 on:
   pull_request:
     paths:
+      - "static/films/**.png"
       - "**.jpg"
       - "**.jpeg"
-      - "static/films/**.png"
   workflow_dispatch:
 
 jobs:
