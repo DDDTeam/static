@@ -2,6 +2,7 @@ name: Compress Images
 on:
   pull_request:
     paths:
+      - "static/avatars/**"
       - "**.png"
       - "**.jpg"
       - "**.jpeg"
