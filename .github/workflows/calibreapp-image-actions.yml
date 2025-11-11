@@ -2,7 +2,7 @@ name: Compress Images
 on:
   pull_request:
     paths:
-      - "static/films/**.png"
+      - "**.png"
       - "**.jpg"
       - "**.jpeg"
   workflow_dispatch:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Compress PR Images
         uses: calibreapp/image-actions@main
